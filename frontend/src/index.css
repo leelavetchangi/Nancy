@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #edf4ff;
+  background: #070a12;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg: #070a12;
+  --panel: #0c111e;
+  --text: #edf4ff;
+  --muted: #8e9bb0;
+  --cyan: #6ceaff;
+  --blue: #3989ff;
+  --purple: #9b70ff;
+  --line: rgba(150, 178, 224, .13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(74, 145, 255, .55);
+}
+
+.site-shell,
+.auth-layout,
+.livechat-app,
+.admin-app {
+  animation: nexa-page-enter .32s ease-out both;
+}
+
+@keyframes nexa-page-enter {
+  from { opacity: .72; }
+  to { opacity: 1; }
+}
+
+.app-error-screen {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  overflow: hidden;
+  padding: 28px;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(40, 81, 166, .2), transparent 38%),
+    radial-gradient(ellipse at 82% 80%, rgba(120, 73, 184, .13), transparent 34%),
+    #070a12;
+}
+
+.app-error-orbit {
+  position: absolute;
+  width: min(82vw, 620px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(108, 234, 255, .09);
+  border-radius: 50%;
+  box-shadow: 0 0 100px rgba(57, 137, 255, .08), inset 0 0 90px rgba(155, 112, 255, .06);
+  pointer-events: none;
+}
+
+.app-error-card {
+  position: relative;
+  width: min(100%, 520px);
+  padding: clamp(28px, 6vw, 52px);
+  border: 1px solid rgba(132, 174, 240, .18);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(16, 26, 48, .94), rgba(10, 14, 27, .96));
+  box-shadow: 0 28px 100px rgba(0, 0, 0, .4), 0 0 48px rgba(57, 137, 255, .09);
+}
+
+.app-error-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+  place-items: center;
+  border: 1px solid rgba(108, 234, 255, .26);
+  border-radius: 15px;
+  background: rgba(57, 137, 255, .12);
+  color: #8ceaff;
+  box-shadow: 0 0 28px rgba(57, 137, 255, .13);
+}
+
+.app-error-card h1 {
+  margin: 12px 0;
+  color: #f2f6ff;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(28px, 5vw, 38px);
+  letter-spacing: -.045em;
+  line-height: 1.12;
+}
+
+.app-error-copy {
+  max-width: 390px;
+  margin: 0;
+  color: #9baac2;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.app-error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+@media (max-width: 480px) {
+  .app-error-actions > * { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

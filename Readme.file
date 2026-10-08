@@ -1,0 +1,1072 @@
+You are a senior full-stack engineer, UI/UX designer, React developer, Node.js developer, MongoDB architect, and accessibility engineer.
+
+I am building a project called:
+
+NEXA — MULTI-AGENT CUSTOMER SUPPORT DESK
+
+I have attached a reference UI image. THIS IMAGE IS THE PRIMARY DESIGN SOURCE.
+
+IMPORTANT:
+DO NOT redesign the interface.
+DO NOT create a different UI.
+DO NOT simplify the UI.
+DO NOT remove sections.
+DO NOT replace the design with a generic dashboard.
+DO NOT change the overall layout, visual hierarchy, color mood, card style, glowing effects, typography style, navigation structure, spacing, or futuristic AI aesthetic.
+
+Recreate the reference design as closely as technically possible while making every important element functional.
+
+The final result must look like a premium real-world AI customer-support SaaS product, not a college-level static website.
+
+==================================================
+1. TECHNOLOGY STACK
+==================================================
+
+Frontend:
+- React
+- Vite
+- React Router
+- JavaScript
+- Tailwind CSS or well-structured CSS
+- Axios
+- Context API where appropriate
+- Recharts or another suitable chart library
+- Lucide React / suitable icon library
+- Web Speech API for voice commands
+
+Backend:
+- Node.js
+- Express.js
+- REST APIs
+- JWT authentication
+- bcrypt password hashing
+- role-based authorization
+- Socket.IO for real-time chat/notifications
+
+Database:
+- MongoDB
+- Mongoose
+
+Architecture:
+frontend/
+backend/
+
+Keep frontend and backend clearly separated.
+
+Create clean reusable components.
+Do not put the entire application inside one huge component.
+
+==================================================
+2. DESIGN REQUIREMENT
+==================================================
+
+The uploaded reference image must be treated as the visual source of truth.
+
+Use the same overall:
+
+- dark futuristic background
+- deep navy/black base
+- electric blue lighting
+- purple/magenta glow
+- cyan highlights
+- glassmorphism cards
+- neon borders
+- rounded cards
+- glowing buttons
+- futuristic AI/robot visuals
+- subtle animated background particles
+- dashboard sidebar
+- top navigation
+- cards
+- tables
+- status badges
+- charts
+- gradients
+- hover effects
+- smooth transitions
+
+Do not turn it into a normal white Bootstrap website.
+
+Do not use random colors.
+
+Keep the visual identity consistent across every page.
+
+The UI must be responsive for:
+- desktop
+- laptop
+- tablet
+- mobile
+
+==================================================
+3. BRAND
+==================================================
+
+Application name:
+
+NEXA
+
+Subtitle:
+
+Multi-Agent Customer Support Desk
+
+Main tagline:
+
+AI-Powered. Human-Centered. Always On.
+
+Use the NEXA logo consistently.
+
+Create a clean futuristic NEXA logo using CSS/SVG/iconography if an image asset is not available.
+
+==================================================
+4. REQUIRED PAGES
+==================================================
+
+Create at least these pages:
+
+1. Home
+2. Login
+3. Register
+4. Customer Dashboard
+5. My Tickets
+6. Create Ticket
+7. AI Triage Center
+8. AI Draft Reply + Human Approval
+9. Live Chat
+10. Voice Control Center
+11. Support Agent Dashboard
+12. Supervisor Analytics
+13. Knowledge Base / RAG
+14. CSAT Survey
+15. Contact
+16. Admin Dashboard
+17. User Management
+18. Ticket Management
+19. Notifications
+20. Profile / Settings
+21. 404 Page
+
+Every page must follow the reference design language.
+
+==================================================
+5. HOME PAGE
+==================================================
+
+Recreate the reference Home page very closely.
+
+Hero section:
+
+Heading:
+
+Multi-Agent
+Customer Support Desk
+
+Use highlighted/glowing words similar to the reference.
+
+Subtitle:
+
+AI-Powered. Human-Centered. Always On.
+
+Description:
+
+Intelligent ticket routing, AI-generated replies, live human support and real-time analytics — all in one platform.
+
+Buttons:
+
+Get Started
+Watch Demo
+
+Add futuristic AI robot artwork on the right.
+
+Add floating information cards around the AI robot:
+
+AI Confidence 94%
+Ticket #1048
+High Priority
+SLA 18 min
+Resolved
+
+Add subtle floating/glowing animation.
+
+Below hero add feature cards:
+
+AI Ticket Triage & Classification
+Live Chat Support
+Voice Control & Navigation
+Real-time Analytics
+
+Add statistics:
+
+52+ APIs Integrated
+12,480+ Tickets Resolved
+94.6% AI Accuracy
+2.4 min Average Response Time
+4.8/5 Customer Satisfaction
+
+Numbers should animate when the section becomes visible.
+
+Add subtle particles and glow effects.
+
+Do NOT make the animation excessive.
+
+==================================================
+6. NAVBAR
+==================================================
+
+Navbar should closely follow the reference.
+
+Left:
+NEXA logo
+
+Navigation:
+Home
+Features
+About
+Contact
+
+Right:
+Voice button
+Login
+Register
+
+Navbar should be sticky.
+
+On mobile:
+use hamburger menu.
+
+==================================================
+7. LOGIN
+==================================================
+
+Create a premium split-screen login page similar to the reference.
+
+Fields:
+
+Email
+Password
+
+Features:
+
+Show/hide password
+Remember me
+Forgot password
+Login button
+
+Role options:
+
+Customer
+Agent
+Supervisor
+Admin
+
+Do not trust the role selected by the client.
+The backend must validate the authenticated user's actual role.
+
+On successful login:
+redirect the user according to role.
+
+Customer -> Customer Dashboard
+Agent -> Agent Dashboard
+Supervisor -> Supervisor Dashboard
+Admin -> Admin Dashboard
+
+Display proper validation messages.
+
+==================================================
+8. REGISTER
+==================================================
+
+Fields:
+
+Full Name
+Email
+Mobile Number
+Password
+Confirm Password
+Role
+
+Password strength indicator.
+
+Validate:
+
+required fields
+email format
+password strength
+password confirmation
+duplicate email
+
+Hash passwords using bcrypt before storing them.
+
+Never store plain-text passwords.
+
+==================================================
+9. AUTHENTICATION
+==================================================
+
+Implement real authentication.
+
+Use:
+
+JWT
+bcrypt
+protected routes
+role-based authorization
+logout
+token expiration handling
+
+Create:
+
+/api/auth/register
+/api/auth/login
+/api/auth/me
+/api/auth/logout
+
+Protect private pages.
+
+Unauthenticated users must not access dashboards directly.
+
+==================================================
+10. CUSTOMER DASHBOARD
+==================================================
+
+Recreate the reference dashboard style.
+
+Greeting:
+
+Good Morning 👋
+
+Cards:
+
+Total Tickets
+Pending
+AI Processing
+Resolved
+
+Main button:
+
++ Create New Ticket
+
+Ticket table:
+
+Ticket ID
+Subject
+Category
+Priority
+Status
+Action
+
+Status badges:
+
+AI Processing
+Assigned to Agent
+Pending
+Resolved
+Escalated
+
+Use the same futuristic visual style as the reference.
+
+==================================================
+11. TICKET SYSTEM
+==================================================
+
+Customer can:
+
+Create ticket
+View ticket
+Update ticket where allowed
+Add messages
+Track status
+View responses
+Close ticket
+
+Ticket fields:
+
+subject
+description
+category
+priority
+attachments
+status
+assignedAgent
+aiConfidence
+createdAt
+updatedAt
+
+Create MongoDB Ticket model.
+
+API examples:
+
+POST /api/tickets
+GET /api/tickets
+GET /api/tickets/:id
+PUT /api/tickets/:id
+DELETE /api/tickets/:id
+
+Only authorized users can access appropriate tickets.
+
+==================================================
+12. AI TRIAGE CENTER
+==================================================
+
+Create the futuristic AI Triage page shown in the reference.
+
+Visual process:
+
+Understanding
+↓
+Classifying
+↓
+Prioritizing
+↓
+Assigning
+
+Analyze ticket and produce:
+
+Category
+Priority
+Sentiment
+Confidence Score
+
+Example:
+
+Category: Technical
+Priority: High
+Sentiment: Frustrated
+Confidence: 94%
+
+Show confidence using an animated progress/ring indicator.
+
+If confidence is high:
+AI can recommend assignment.
+
+If confidence is low:
+automatically flag the ticket for human review.
+
+IMPORTANT:
+Do not fake real AI results and present them as real.
+Create a clean AI-service abstraction so a real AI API can be connected later.
+
+==================================================
+13. AI DRAFT REPLY + HUMAN APPROVAL
+==================================================
+
+Create the reference split-screen design.
+
+Left:
+Customer Message
+
+Right:
+AI Generated Reply
+
+Show:
+
+AI Confidence
+Suggested Actions
+
+Buttons:
+
+Approve & Send
+Edit Reply
+Escalate to Human
+
+Approve:
+save response
+send response
+update ticket status
+
+Edit:
+allow agent to modify draft
+
+Escalate:
+assign ticket to human/supervisor
+
+Every action must work through backend APIs.
+
+==================================================
+14. LIVE CHAT
+==================================================
+
+Implement real-time chat using Socket.IO.
+
+Features:
+
+online users
+typing indicator
+message timestamps
+read status
+attachments
+quick replies
+AI suggestion
+voice message UI
+notifications
+
+Messages must be stored in MongoDB.
+
+Do not make it a fake static chat screen.
+
+==================================================
+15. VOICE CONTROL
+==================================================
+
+THIS IS A MAJOR FEATURE.
+
+Implement voice control using the browser Web Speech API where supported.
+
+There must also be normal mouse/touch/keyboard controls.
+
+Voice button:
+
+🎙️ Voice Assistant
+
+States:
+
+Listening...
+Processing...
+Command Executed
+
+Support commands such as:
+
+"Open dashboard"
+"Go to my tickets"
+"Create a new ticket"
+"Show high priority tickets"
+"Open ticket 1048"
+"Go to live chat"
+"Open AI triage"
+"Open analytics"
+"Open knowledge base"
+"Open notifications"
+"Go to profile"
+"Logout"
+
+Voice command should actually navigate or perform the appropriate action.
+
+Do not claim voice functionality exists if the browser does not support it.
+Show a friendly unsupported-browser message when required.
+
+Ask for microphone permission only when the user activates voice control.
+
+Never continuously listen without the user's action.
+
+Provide a visible microphone state.
+
+Also allow normal navigation at all times.
+
+==================================================
+16. SUPPORT AGENT DASHBOARD
+==================================================
+
+Create:
+
+Critical
+High
+Medium
+Low
+
+ticket queues.
+
+Show:
+
+Ticket ID
+Subject
+Priority
+Customer
+SLA
+Status
+Action
+
+Add SLA countdown.
+
+Example:
+
+Response due in 08:42
+
+Color/status changes should happen based on urgency.
+
+Agent can:
+
+accept ticket
+reply
+use AI suggestion
+approve AI draft
+edit AI draft
+escalate
+resolve ticket
+
+==================================================
+17. SUPERVISOR ANALYTICS
+==================================================
+
+Create premium analytics dashboard.
+
+Charts:
+
+AI vs Human Resolution
+Tickets per Day
+Resolution Rate
+Average Response Time
+Escalation Rate
+CSAT
+Top Categories
+
+Cards:
+
+AI Resolution Rate
+Human Resolution Rate
+Average Response
+Customer Satisfaction
+
+Use real MongoDB data.
+
+Do not hard-code analytics.
+
+==================================================
+18. KNOWLEDGE BASE / RAG
+==================================================
+
+Create Knowledge Base page matching the futuristic design.
+
+Search bar:
+
+Ask anything about our support knowledge...
+
+Show:
+
+Popular Articles
+Search Results
+AI Answer
+Sources
+
+Create backend abstraction for RAG.
+
+For the initial working version, implement document/article retrieval from MongoDB.
+
+Structure it so an embedding/vector database and real LLM can be connected later.
+
+Never pretend that keyword search is real generative RAG.
+
+==================================================
+19. CSAT
+==================================================
+
+Create:
+
+How did we do?
+
+5-star rating.
+
+Feedback textarea.
+
+Submit Feedback.
+
+Store:
+
+ticketId
+userId
+rating
+feedback
+createdAt
+
+Show thank-you animation after submission.
+
+==================================================
+20. ADMIN
+==================================================
+
+Admin dashboard:
+
+Users
+Agents
+Tickets
+AI Configuration
+Roles & Permissions
+Knowledge Base
+Analytics
+Audit Logs
+Settings
+
+Admin can manage users and tickets.
+
+Use role-based backend authorization.
+
+==================================================
+21. NOTIFICATIONS
+==================================================
+
+Create notification system.
+
+Examples:
+
+New ticket assigned
+AI draft ready
+Ticket escalated
+SLA warning
+New customer message
+Ticket resolved
+
+Use Socket.IO for real-time notification updates.
+
+==================================================
+22. CONTACT PAGE
+==================================================
+
+Create a futuristic contact page matching the reference.
+
+Include:
+
+Location
+Email
+Phone
+Live Chat
+
+Contact form:
+
+Name
+Email
+Message
+
+Send message to backend and store it.
+
+==================================================
+23. 404 PAGE
+==================================================
+
+Create a custom futuristic 404 page.
+
+Text:
+
+Oops! Ticket Not Found
+
+Use NEXA AI robot visual.
+
+Button:
+
+Back to Dashboard
+
+==================================================
+24. DATABASE MODELS
+==================================================
+
+Create appropriate Mongoose models:
+
+User
+Ticket
+Message
+Notification
+KnowledgeArticle
+CSAT
+AuditLog
+ContactMessage
+
+Use timestamps.
+
+Create proper relationships/references.
+
+==================================================
+25. API DESIGN
+==================================================
+
+Organize backend routes:
+
+/api/auth
+/api/users
+/api/tickets
+/api/messages
+/api/ai
+/api/chat
+/api/agents
+/api/supervisor
+/api/admin
+/api/knowledge
+/api/csat
+/api/notifications
+/api/contact
+
+Use controllers/services/models/routes/middleware structure.
+
+Do not put all backend code in server.js.
+
+==================================================
+26. ERROR HANDLING
+==================================================
+
+Implement:
+
+frontend loading states
+backend validation
+API error handling
+404 handling
+database error handling
+authentication errors
+network errors
+empty states
+
+Show beautiful error messages consistent with the UI.
+
+Never expose passwords, secrets, stack traces, or sensitive server information to users.
+
+==================================================
+27. ENVIRONMENT VARIABLES
+==================================================
+
+Use .env.
+
+Example:
+
+MONGO_URI=
+JWT_SECRET=
+PORT=
+CLIENT_URL=
+AI_API_KEY=
+
+Never hard-code secrets.
+
+Create .env.example.
+
+==================================================
+28. SECURITY
+==================================================
+
+Implement:
+
+bcrypt
+JWT
+protected routes
+role authorization
+input validation
+CORS configuration
+safe error responses
+environment variables
+basic rate limiting for authentication endpoints
+
+Never store passwords in plain text.
+
+==================================================
+29. UI ANIMATIONS
+==================================================
+
+The reference design contains futuristic visual energy.
+
+Implement subtle:
+
+glow
+pulse
+floating cards
+gradient movement
+button hover
+card hover
+page transitions
+number counters
+chart animations
+AI processing animation
+voice waveform animation
+loading states
+
+IMPORTANT:
+
+Do NOT make every image blink rapidly.
+
+Use professional pulse/glow/floating animations so the interface remains readable and premium.
+
+==================================================
+30. BUTTON REQUIREMENT
+==================================================
+
+EVERY visible button must have a real action.
+
+Do not create decorative buttons that do nothing.
+
+Examples:
+
+Get Started -> Login/Register or dashboard
+Watch Demo -> Demo section/modal
+Login -> actual authentication
+Register -> actual registration
+Create Ticket -> ticket form
+View -> ticket details
+Approve & Send -> send response
+Edit Reply -> edit mode
+Escalate -> escalation workflow
+Voice -> voice assistant
+Analytics -> analytics page
+Logout -> real logout
+
+No dead buttons.
+
+==================================================
+31. IMAGE REQUIREMENT
+==================================================
+
+Use futuristic AI/customer-support illustrations matching the reference.
+
+Do not randomly replace them with unrelated stock photos.
+
+Prefer:
+
+AI robot
+customer support agent
+live chat
+analytics
+voice assistant
+knowledge base
+customer service
+
+Keep the same visual mood throughout the application.
+
+If exact reference image assets are unavailable, create visually consistent alternatives rather than changing the UI concept.
+
+==================================================
+32. RESPONSIVENESS
+==================================================
+
+Desktop must closely match the reference.
+
+Mobile should intelligently adapt:
+
+sidebar -> mobile drawer
+tables -> responsive cards
+navbar -> hamburger
+charts -> responsive
+hero -> stacked layout
+
+Do not destroy the desktop design to achieve mobile responsiveness.
+
+==================================================
+33. FINAL QUALITY REQUIREMENT
+==================================================
+
+Before considering the project complete, test:
+
+Register
+Login
+Logout
+Role routing
+Create ticket
+View ticket
+AI triage
+AI confidence
+AI draft
+Approve reply
+Edit reply
+Escalate
+Live chat
+Notifications
+Voice navigation
+Knowledge search
+CSAT
+Admin functions
+Supervisor analytics
+Mobile responsiveness
+Error handling
+
+Fix all console errors.
+
+Fix all broken imports.
+
+Fix all broken routes.
+
+Fix all broken API calls.
+
+Fix all MongoDB connection problems.
+
+Do not leave TODO buttons.
+
+Do not leave fake navigation.
+
+Do not use static dummy screens where a working feature is expected.
+
+==================================================
+34. MOST IMPORTANT INSTRUCTION
+==================================================
+
+The attached reference image is the design benchmark.
+
+I want the final application to give the same first impression:
+
+"Wow — this looks like a real AI product."
+
+Preserve the visual identity, futuristic dark theme, neon blue/purple glow, AI robot visuals, glass cards, dashboards, navigation style, buttons, charts, and overall composition.
+
+At the same time, make the application genuinely functional through:
+
+React frontend
+Node/Express backend
+MongoDB database
+REST APIs
+JWT authentication
+Socket.IO
+role-based access
+voice control
+real forms
+real navigation
+real ticket workflow
+real chat
+real notifications
+
+Do not stop after creating the frontend.
+
+Build and connect the complete application.
+
+==================================================
+35. DEVELOPMENT RULE
+==================================================
+
+I am a beginner.
+
+Therefore, do not simply dump thousands of files at once.
+
+Build the application in phases.
+
+PHASE 1:
+Project setup + frontend design system + navbar + Home page
+
+PHASE 2:
+Login/Register + authentication + MongoDB
+
+PHASE 3:
+Customer dashboard + ticket system
+
+PHASE 4:
+AI Triage + AI Draft + Human Approval
+
+PHASE 5:
+Agent Dashboard + Live Chat + Socket.IO
+
+PHASE 6:
+Voice Control
+
+PHASE 7:
+Supervisor Analytics + Knowledge Base + CSAT
+
+PHASE 8:
+Admin + Notifications + Security
+
+PHASE 9:
+Testing + bug fixing + final UI polish
+
+After every phase:
+- explain what was created
+- list files changed
+- give exact terminal commands
+- tell me exactly where each file belongs
+- tell me how to run frontend and backend
+- check for errors before moving to the next phase
+
+Do not move to the next phase until the current phase is working.
+
+START WITH PHASE 1 ONLY.
+
+
+REFERENCE IMAGE RULE:
+
+Use the attached image as the visual reference for the entire application.
+
+Do not interpret it loosely.
+Do not redesign it based on your own preferences.
+Match its visual language, layout, proportions, colors, typography hierarchy, glow effects, cards, navigation, illustrations, and dashboard composition as closely as possible.
+
+The goal is:
+REFERENCE IMAGE → FUNCTIONAL REAL WEBSITE
+
+not:
+
+REFERENCE IMAGE → DIFFERENT WEBSITE.
